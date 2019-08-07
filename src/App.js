@@ -6,7 +6,7 @@ import {AppMenu} from './AppMenu';
 import {AppProfile} from './AppProfile';
 import {Route} from 'react-router-dom';
 import {Dashboard} from './components/Dashboard';
-import {FormsDemo} from './components/FormsDemo';
+import {CreateBooking} from './components/CreateBooking';
 import {EmptyPage} from './components/EmptyPage';
 import {Documentation} from "./components/Documentation";
 import 'primereact/resources/themes/nova-light/theme.css';
@@ -93,7 +93,7 @@ class App extends Component {
             {
                 label: 'Components', icon: 'pi pi-fw pi-globe', badge: '2',
                 items: [
-                    {label: 'Forms', icon: 'pi pi-fw pi-file', to: '/forms'},
+                    {label: 'Create a booking', icon: 'pi pi-fw pi-file', to: '/create-booking'},
                     {label: 'Empty Page', icon: 'pi pi-fw pi-circle-off', to: '/empty'}
                 ]
             }
@@ -163,7 +163,7 @@ class App extends Component {
 
                 <div className="layout-main">
                     <Route path="/" exact component={Dashboard} />
-                    <Route path="/forms" component={FormsDemo} />
+                    <Route path="/create-booking" component={CreateBooking} />
                     <Route path="/empty" component={EmptyPage} />
                     <Route path="/documentation" component={Documentation} />
                 </div>
