@@ -3,11 +3,7 @@ import {CarService} from '../service/CarService';
 import {Panel} from 'primereact/panel';
 import {Checkbox} from 'primereact/checkbox';
 import {Button} from 'primereact/button';
-import {Dropdown} from 'primereact/dropdown';
 import {InputText} from 'primereact/inputtext';
-import {Chart} from 'primereact/chart';
-import {DataTable} from 'primereact/datatable';
-import {Column} from 'primereact/column';
 import {FullCalendar} from 'primereact/fullcalendar';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
@@ -47,7 +43,7 @@ export class Dashboard extends Component {
             ],
             fullcalendarOptions: {
                 plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
-                defaultDate: '2017-02-01',
+                defaultDate: '2019-08-01',
                 header: {
                     left: 'prev,next today',
                     center: 'title',
@@ -59,66 +55,60 @@ export class Dashboard extends Component {
                 {
                     "id": 1,
                     "title": "All Day Event",
-                    "start": "2017-02-01"
+                    "start": "2019-08-01"
                 },
                 {
                     "id": 2,
                     "title": "Long Event",
-                    "start": "2017-02-07",
-                    "end": "2017-02-10"
+                    "start": "2019-08-07",
+                    "end": "2019-08-10"
                 },
                 {
                     "id": 3,
                     "title": "Repeating Event",
-                    "start": "2017-02-09T16:00:00"
+                    "start": "2019-08-09T16:00:00"
                 },
                 {
                     "id": 4,
                     "title": "Repeating Event",
-                    "start": "2017-02-16T16:00:00"
+                    "start": "2019-08-16T16:00:00"
                 },
                 {
                     "id": 5,
                     "title": "Conference",
-                    "start": "2017-02-11",
-                    "end": "2017-02-13"
+                    "start": "2019-08-11",
+                    "end": "2019-08-13"
                 },
                 {
                     "id": 6,
                     "title": "Meeting",
-                    "start": "2017-02-12T10:30:00",
-                    "end": "2017-02-12T12:30:00"
+                    "start": "2019-08-12T10:30:00",
+                    "end": "2019-08-12T12:30:00"
                 },
                 {
                     "id": 7,
                     "title": "Lunch",
-                    "start": "2017-02-12T12:00:00"
+                    "start": "2019-08-12T12:00:00"
                 },
                 {
                     "id": 8,
                     "title": "Meeting",
-                    "start": "2017-02-12T14:30:00"
+                    "start": "2019-08-12T14:30:00"
                 },
                 {
                     "id": 9,
                     "title": "Happy Hour",
-                    "start": "2017-02-12T17:30:00"
+                    "start": "2019-08-12T17:30:00"
                 },
                 {
                     "id": 10,
                     "title": "Dinner",
-                    "start": "2017-02-12T20:00:00"
+                    "start": "2019-08-12T20:00:00"
                 },
                 {
                     "id": 11,
                     "title": "Birthday Party",
-                    "start": "2017-02-13T07:00:00"
-                },
-                {
-                    "id": 12,
-                    "title": "Click for Google",
-                    "url": "http://google.com/",
-                    "start": "2017-02-28"
+                    "start": "2019-08-13T07:00:00"
                 }
             ]
         };
@@ -159,8 +149,8 @@ export class Dashboard extends Component {
                 <div className="p-col-12 p-lg-4">
                     <div className="card summary">
                         <span className="title">Sales</span>
-                        <span className="detail">Number of purchases</span>
-                        <span className="count purchases">534</span>
+                        <span className="detail">Number of bookings</span>
+                        <span className="count purchases">4</span>
                     </div>
                 </div>
                 <div className="p-col-12 p-lg-4">
@@ -171,16 +161,6 @@ export class Dashboard extends Component {
                     </div>
                 </div>
 
-                <div className="p-col-12 p-md-6 p-xl-3">
-                    <div className="highlight-box">
-                        <div className="initials" style={{backgroundColor:'#007be5',color:'#00448f'}}><span>TV</span></div>
-                        <div className="highlight-details ">
-                            <i className="pi pi-search"/>
-                            <span>Total Queries</span>
-                            <span className="count">523</span>
-                        </div>
-                    </div>
-                </div>
                 <div className="p-col-12 p-md-6 p-xl-3">
                     <div className="highlight-box">
                         <div className="initials" style={{backgroundColor:'#ef6262',color:'#a83d3b'}}><span>TI</span></div>
@@ -251,13 +231,13 @@ export class Dashboard extends Component {
                     <Panel header="Contact Us">
                         <div className="p-grid">
                             <div className="p-col-12">
-                                <Dropdown value={this.state.city} options={this.state.cities} placeholder="Select a City" onChange={this.onCityChange} autoWidth={false} />
-                            </div>
-                            <div className="p-col-12">
                                 <InputText type="text" placeholder="Name" />
                             </div>
                             <div className="p-col-12">
-                                <InputText type="text" placeholder="Age" />
+                                <InputText type="text" placeholder="E-mail" />
+                            </div>
+                            <div className="p-col-12">
+                                <InputText type="text" placeholder="Booking ID" />
                             </div>
                             <div className="p-col-12">
                                 <InputText type="text" placeholder="Message" />
@@ -302,23 +282,6 @@ export class Dashboard extends Component {
                             </li>
                         </ul>
                     </Panel>
-                </div>
-                <div className="p-col-12 p-lg-6">
-                    <div className="card">
-                        <h1 style={{fontSize:'16px'}}>Recent Sales</h1>
-                        <DataTable value={this.state.cars}  style={{marginBottom: '20px'}} responsive={true}
-                                selectionMode="single" selection={this.state.selectedCar} onSelectionChange={(e) => this.setState({selectedCar: e.value})}>
-                            <Column field="vin" header="Vin" sortable={true} />
-                            <Column field="year" header="Year" sortable={true} />
-                            <Column field="brand" header="Brand" sortable={true} />
-                            <Column field="color" header="Color" sortable={true} />
-                        </DataTable>
-                    </div>
-                </div>
-                <div className="p-col-12 p-lg-6">
-                    <div className="card">
-                        <Chart type="line" data={this.state.lineData}/>
-                    </div>
                 </div>
                 <div className="p-col-12 p-lg-8">
                     <Panel header="Calendar" style={{height: '100%'}}> 
