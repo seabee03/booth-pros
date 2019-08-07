@@ -8,12 +8,10 @@ import {Route} from 'react-router-dom';
 import {Dashboard} from './components/Dashboard';
 import {FormsDemo} from './components/FormsDemo';
 import {SampleDemo} from './components/SampleDemo';
-import {DataDemo} from './components/DataDemo';
 import {PanelsDemo} from './components/PanelsDemo';
 import {OverlaysDemo} from './components/OverlaysDemo';
 import {MenusDemo} from './components/MenusDemo';
 import {MessagesDemo} from './components/MessagesDemo';
-import {ChartsDemo} from './components/ChartsDemo';
 import {MiscDemo} from './components/MiscDemo';
 import {EmptyPage} from './components/EmptyPage';
 import {Documentation} from "./components/Documentation";
@@ -117,12 +115,10 @@ class App extends Component {
                 items: [
 					{label: 'Sample Page', icon: 'pi pi-fw pi-th-large', to: '/sample'},
 					{label: 'Forms', icon: 'pi pi-fw pi-file', to: '/forms'},
-					{label: 'Data', icon: 'pi pi-fw pi-table', to: '/data'},
 					{label: 'Panels', icon: 'pi pi-fw pi-list', to: '/panels'},
 					{label: 'Overlays', icon: 'pi pi-fw pi-clone', to: '/overlays'},
 					{label: 'Menus', icon: 'pi pi-fw pi-plus', to: '/menus'},
 					{label: 'Messages', icon: 'pi pi-fw pi-spinner',to: '/messages'},
-					{label: 'Charts', icon: 'pi pi-fw pi-chart-bar', to: '/charts'},
 					{label: 'Misc', icon: 'pi pi-fw pi-upload', to: '/misc'}
                 ]
             },
@@ -239,12 +235,10 @@ class App extends Component {
                     <Route path="/" exact component={Dashboard} />
                     <Route path="/forms" component={FormsDemo} />
                     <Route path="/sample" component={SampleDemo} />
-                    <Route path="/data" component={DataDemo} />
                     <Route path="/panels" component={PanelsDemo} />
                     <Route path="/overlays" component={OverlaysDemo} />
                     <Route path="/menus" component={MenusDemo} />
                     <Route path="/messages" component={MessagesDemo} />
-                    <Route path="/charts" component={ChartsDemo} />
                     <Route path="/misc" component={MiscDemo} />
                     <Route path="/empty" component={EmptyPage} />
                     <Route path="/documentation" component={Documentation} />
