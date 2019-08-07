@@ -156,76 +156,123 @@ export class CreateBooking extends Component {
                                 <InputText placeholder="Name"/>
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Email"/>
+                                <InputText placeholder="E-mail Address"/>
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Phone"/>
+                                <InputText placeholder="Phone Number"/>
                             </div>
+                            <div className="p-col-12 p-md-4">
+                                <InputText placeholder="E-mail Address"/>
+                            </div>                            
                             <div className="p-col-12 p-md-4">
                                 <InputText placeholder="Address Line 1" />
                             </div>
                             <div className="p-col-12 p-md-4">
                                 <InputText placeholder="Address Line 2" />
                             </div>
+                            <div className="p-col-12 p-md-4">
+                                <InputText placeholder="City" />
+                            </div>
+                            <div className="p-col-12 p-md-4">
+                                <InputText placeholder="State" />
+                            </div>
+                            <div className="p-col-12 p-md-4">
+                                <InputText placeholder="Zip Code" />
+                            </div>
                         </div>
                     </div>
 
                     <div className="card card-w-title">
-                        <h1>Veunue Information</h1>
+                        <h1>Venue Information</h1>
                         <div className="p-grid">
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Name"/>
+                                <InputText placeholder="Venue Name"/>
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Email"/>
+                                <InputText placeholder="Venue Contact Name"/>
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Phone"/>
+                                <InputText placeholder="Venue Phone Number"/>
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Address Line 1" />
+                                <InputText placeholder="Venue Address Line 1" />
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Address Line 2" />
+                                <InputText placeholder="Venue Address Line 2" />
+                            </div>
+                            <div className="p-col-12 p-md-4">
+                                <InputText placeholder="Venue City" />
+                            </div>
+                            <div className="p-col-12 p-md-4">
+                                <InputText placeholder="Venue State" />
+                            </div>
+                            <div className="p-col-12 p-md-4">
+                                <InputText placeholder="Venue Zip Code" />
                             </div>
                         </div>
                     </div>
-
                     <div className="card card-w-title">
-                        <h1>TextArea</h1>
-                        <InputTextarea rows={3} cols={30} placeholder="Your Message" autoResize={true} />
+                        <h1>Date and time of the event.</h1>
+                        {/* <Calendar value={this.state.date1} onChange={(e) => this.setState({date1: e.value})} inline={true} /> */}
+                        <p>This is the time of the event. Not the time that the photo booth will be running.</p>
+                        <div className="p-grid-m" style={{marginTop:'20px'}}>
+                            {/* <div className="p-col-12">
+                                <Calendar placeholder="Popup" value={this.state.date2} onChange={(e) => this.setState({date2: e.value})}/>
+                            </div> */}
+                            {/* <div className="p-col-12">
+                                <Calendar placeholder="DateTime" showTime={true} dateFormat="mm/dd/yy" value={this.state.date3} onChange={(e) => this.setState({date3: e.value})}/>
+                            </div> */}
+                            <div className="p-col-12">
+                                <Calendar placeholder="Date" showIcon={true} value={this.state.date5} onChange={(e) => this.setState({date5: e.value})}/>
+                            </div>
+                            <div className="p-col-12">
+                                <Calendar placeholder="Start time" timeOnly={true} showTime={true} value={this.state.date4} onChange={(e) => this.setState({date4: e.value})}/>
+                            </div>
+                            <div className="p-col-12">
+                                <Calendar placeholder="End time" timeOnly={true} showTime={true} value={this.state.date4} onChange={(e) => this.setState({date4: e.value})}/>
+                            </div>
+                            {/* <div className="p-col-12">
+                                <Calendar readOnly={true} placeholder="Multiple Months" numberOfMonths={3} value={this.state.date6} onChange={(e) => this.setState({date6: e.value})}/>
+                            </div> */}
+                            {/* <div className="p-col-12">
+                                <Calendar readOnly={true} dateFormat="mm/yy" placeholder="Month Picker" view="month" value={this.state.date7} onChange={(e) => this.setState({date7: e.value})}/>
+                            </div> */}
+                        </div>
                     </div>
-
                     <div className="card card-w-title">
+                        <h1>Date and time the photo booth will run.</h1>
+                        {/* <Calendar value={this.state.date1} onChange={(e) => this.setState({date1: e.value})} inline={true} /> */}
+                        <p>This is the time range that the photo booth will be on for guests.</p>
+                        <div className="p-grid-m" style={{marginTop:'20px'}}>
+                            {/* <div className="p-col-12">
+                                <Calendar placeholder="Popup" value={this.state.date2} onChange={(e) => this.setState({date2: e.value})}/>
+                            </div> */}
+                            {/* <div className="p-col-12">
+                                <Calendar placeholder="DateTime" showTime={true} dateFormat="mm/dd/yy" value={this.state.date3} onChange={(e) => this.setState({date3: e.value})}/>
+                            </div> */}
+                            <div className="p-col-12">
+                                <Calendar placeholder="Date" showIcon={true} value={this.state.date5} onChange={(e) => this.setState({date5: e.value})}/>
+                            </div>
+                            <div className="p-col-12">
+                                <Calendar placeholder="Start time" timeOnly={true} showTime={true} value={this.state.date4} onChange={(e) => this.setState({date4: e.value})}/>
+                            </div>
+                            <div className="p-col-12">
+                                <Calendar placeholder="End time" timeOnly={true} showTime={true} value={this.state.date4} onChange={(e) => this.setState({date4: e.value})}/>
+                            </div>
+                            {/* <div className="p-col-12">
+                                <Calendar readOnly={true} placeholder="Multiple Months" numberOfMonths={3} value={this.state.date6} onChange={(e) => this.setState({date6: e.value})}/>
+                            </div> */}
+                            {/* <div className="p-col-12">
+                                <Calendar readOnly={true} dateFormat="mm/yy" placeholder="Month Picker" view="month" value={this.state.date7} onChange={(e) => this.setState({date7: e.value})}/>
+                            </div> */}
+                        </div>
+                    </div>
+                    
+
+                    {/* <div className="card card-w-title">
                         <h1>MultiSelect</h1>
                         <MultiSelect value={this.state.cars} options={this.state.carOptions} onChange={event => this.setState({cars: event.value})} filter={true}/>
-                    </div>
-
-                    <div className="card card-w-title">
-                        <h1>Calendar</h1>
-                        <Calendar value={this.state.date1} onChange={(e) => this.setState({date1: e.value})} inline={true} />
-
-                        <div className="p-grid-m" style={{marginTop:'20px'}}>
-                            <div className="p-col-12">
-                                <Calendar placeholder="Popup" value={this.state.date2} onChange={(e) => this.setState({date2: e.value})}/>
-                            </div>
-                            <div className="p-col-12">
-                                <Calendar placeholder="DateTime" showTime={true} dateFormat="mm/dd/yy" value={this.state.date3} onChange={(e) => this.setState({date3: e.value})}/>
-                            </div>
-                            <div className="p-col-12">
-                                <Calendar placeholder="Time" timeOnly={true} showTime={true} value={this.state.date4} onChange={(e) => this.setState({date4: e.value})}/>
-                            </div>
-                            <div className="p-col-12">
-                                <Calendar placeholder="Button" showIcon={true} value={this.state.date5} onChange={(e) => this.setState({date5: e.value})}/>
-                            </div>
-                            <div className="p-col-12">
-                                <Calendar readOnly={true} placeholder="Multiple Months" numberOfMonths={3} value={this.state.date6} onChange={(e) => this.setState({date6: e.value})}/>
-                            </div>
-                            <div className="p-col-12">
-                                <Calendar readOnly={true} dateFormat="mm/yy" placeholder="Month Picker" view="month" value={this.state.date7} onChange={(e) => this.setState({date7: e.value})}/>
-                            </div>
-                        </div>
-                    </div>
+                    </div> */}
 
                 </div>
                 <div className="p-col-12 p-lg-6">
@@ -243,49 +290,84 @@ export class CreateBooking extends Component {
                             </div>
                         </div>
                     </div>
-        
+
                     <div className="card card-w-title">
+                        <h1>Will there be power provided?</h1>
+                        <div className="p-grid">
+                            <p>The photo booth must be within 5 ft. to 8 ft. of a power source for safety reasons. If no, we will work with the venue to provide a safe way to power the photo booth.</p>
+                            <div className="p-col-12 p-md-4">
+                                <RadioButton value="Yes" inputId="rb1" onChange={event => this.setState({radioValue: event.value})} checked={this.state.radioValue === "Yes"}/>
+                                <label htmlFor="rb1" className="p-radiobutton-label">Yes</label>
+                            </div>
+                            <div className="p-col-12 p-md-4">
+                                <RadioButton value="No" inputId="rb2" onChange={event => this.setState({radioValue: event.value})} checked={this.state.radioValue === "No"}/>
+                                <label htmlFor="rb2" className="p-radiobutton-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="card card-w-title">
+                        <h1>Questions, comments, or concerns?</h1>
+                        <InputTextarea rows={3} cols={30} placeholder="Your Message" autoResize={true} />
+                    </div>
+                <div className="card card-w-title">
+                    <h1>Deposit</h1>
+                    <div className="p-grid">
+                        <p>I understand that once a quote is approved that I am responsible for the deposit. The deposit will reserve the date and time of the event.</p>
+                        <div className="p-col-12 p-md-6">
+                            <div className="p-inputgroup">
+                                <span className="p-inputgroup-addon p-inputgroup-addon-checkbox">
+                                    <Checkbox checked={this.state.inputGroupValue} onChange={event => this.setState({inputGroupValue: event.checked})} autoResize={true} />
+                                </span>
+                                <InputText placeholder="Confirm"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                    
+                    {/* <div className="card card-w-title">
                         <h1>InputSwitch</h1>
                         <InputSwitch checked={this.state.inputSwitchValue} onChange={event => this.setState({inputSwitchValue: event.value})} />
-                    </div>
+                    </div> */}
             
-                    <div className="card card-w-title">
+                    {/* <div className="card card-w-title">
                         <h1>Dropdown</h1>
                         <Dropdown options={this.state.cities} value={this.state.dropdownCity} onChange={event => this.setState({dropdownCity: event.value})} autoWidth={false} />
-                    </div>
+                    </div> */}
             
-                    <div className="card card-w-title">
+                    {/* <div className="card card-w-title">
                         <h1>Password</h1>
                         <Password/>
-                    </div>
+                    </div> */}
             
-                    <div className="card card-w-title">
+                    {/* <div className="card card-w-title">
                         <h1>Spinner</h1>
                         <Spinner value={this.state.spinnerValue} onChange={event => this.setState({spinnerValue: event.value})} />
-                    </div>
+                    </div> */}
         
-                    <div className="card card-w-title">
+                    {/* <div className="card card-w-title">
                         <h1>Slider</h1>
                         <Slider range={true} value={this.state.sliderValue} onChange={event => this.setState({sliderValue: event.value})} />
-                    </div>
+                    </div> */}
             
-                    <div className="card card-w-title">
+                    {/* <div className="card card-w-title">
                         <h1>ListBox</h1>
                         <ListBox options={this.state.listBoxCities} value={this.state.listBoxCity} onChange={event => this.setState({listBoxCity: event.value})} filter={true} />
-                    </div>
+                    </div> */}
 
-                    <div className="card card-w-title">
+                    {/* <div className="card card-w-title">
                         <h1>Rating</h1>
                         <Rating value={this.state.ratingValue} onChange={event => this.setState({ratingValue: event.value})} />
-                    </div>
+                    </div> */}
             
-                    <div className="card card-w-title">
+                    {/* <div className="card card-w-title">
                         <h1>ColorPicker</h1>
                         <ColorPicker inline={true} value={this.state.colorPickerValue} onChange={event => this.setState({colorPickerValue: event.value})} />
-                    </div>
+                    </div> */}
                 </div>
 
-                <div className="p-col-12">
+                {/* <div className="p-col-12">
                     <div className="card card-w-title">
                         <h1>Input Groups</h1>
                         <div className="p-grid">
@@ -323,95 +405,96 @@ export class CreateBooking extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="p-col-12">
+                {/* <div className="p-col-12">
                     <div className="card card-w-title">
                         <h1>Editor</h1>
                         <Editor style={{height:'320px'}} />
                     </div>
-                </div>
+                </div> */}
 
                 <div className="p-col-12 p-nogutter">
                     <div className="p-grid">
                         <div className="p-col-12 p-lg-6">
                             <div className="card card-w-title">
-                                <h1>Buttons</h1>
 
                                 <div className="p-grid">
-                                    <div className="p-col-12">ToggleButton</div>
-                                    <div className="p-col-12">
+                                    <div className="p-col-12"></div>
+                                    <div className="p-col-12"><Button label="Submit for Quote" onClick={this.handleClick} /></div>
+                                    {/* <div className="p-col-12">ToggleButton</div> */}
+                                    {/* <div className="p-col-12">
                                         <ToggleButton checked={this.state.toggleButtonValue} onChange={event => this.setState({toggleButtonValue: event.value})} />
-                                    </div>
+                                    </div> */}
                             
-                                    <div className="p-col-12">SelectButton</div>
-                                    <div className="p-col-12">
+                                    {/* <div className="p-col-12">SelectButton</div> */}
+                                    {/* <div className="p-col-12">
                                         <SelectButton value={this.state.selectedType} options={this.state.types} onChange={event => this.setState({selectedType: event.value})} />
-                                    </div>
+                                    </div> */}
                             
-                                    <div className="p-col-12">Button</div>
+                                    {/* <div className="p-col-12">Button</div>
                                     <div className="p-col-12">
                                         <Button label="Bookmark"/>
-                                    </div>
+                                    </div> */}
 
-                                    <div className="p-col-12">Left Icon</div>
+                                    {/* <div className="p-col-12">Left Icon</div>
                                     <div className="p-col-12">
                                         <Button label="Clear" icon="pi pi-times" />
-                                    </div>
+                                    </div> */}
                             
-                                    <div className="p-col-12">Right Icon</div>
+                                    {/* <div className="p-col-12">Right Icon</div>
                                     <div className="p-col-12">
                                         <Button label="Clear" icon="pi pi-times" iconPos="right"/>
-                                    </div>
+                                    </div> */}
 
-                                    <div className="p-col-12">Icon Only</div>
+                                    {/* <div className="p-col-12">Icon Only</div>
                                     <div className="p-col-12">
                                         <Button icon="pi pi-check"/>
-                                    </div>
+                                    </div> */}
 
-                                    <div className="p-col-12">Link</div>
-                                    <div className="p-col-12"><a href="http://www.primefaces.org">Homepage</a></div>
+                                    {/* <div className="p-col-12">Link</div>
+                                    <div className="p-col-12"><a href="http://www.primefaces.org">Homepage</a></div> */}
 
-                                    <div className="p-col-12">SplitButton</div>
+                                    {/* <div className="p-col-12">SplitButton</div>
                                     <div className="p-col-12">
                                         <SplitButton label="Save" icon="pi pi-plus" model={this.state.splitButtonItems} />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
-                        <div className="p-col-12 p-lg-6">
+                        {/* <div className="p-col-12 p-lg-6">
                             <div className="card card-w-title">
                                 <h1>Colored Buttons</h1>
                                 <p>Flat buttons with various color alternatives.</p>
                                 
-                                <div className="p-grid">
-                                    <div className="p-col-12 p-md-4" style={{textAlign:'center'}}>
+                                <div className="p-grid"> */}
+                                    {/* <div className="p-col-12 p-md-4" style={{textAlign:'center'}}>
                                         <Button label="Primary" style={{marginBottom:'10px'}} />
                                         <Button label="Secondary" style={{marginBottom:'10px'}} className="p-button-secondary" />
                                         <Button label="Success" style={{marginBottom:'10px'}} className="p-button-success" />
                                         <Button label="Info" style={{marginBottom:'10px'}} className="p-button-info" />
                                         <Button label="Warning" style={{marginBottom:'10px'}} className="p-button-warning" />
                                         <Button label="Danger" style={{marginBottom:'10px'}} className="p-button-danger" />
-                                    </div>
-                                    <div className="p-col-12 p-md-4" style={{textAlign:'center'}}>
+                                    </div> */}
+                                    {/* <div className="p-col-12 p-md-4" style={{textAlign:'center'}}>
                                         <Button label="Primary" style={{marginBottom:'10px'}} className="p-button-raised"/>
                                         <Button label="Secondary" style={{marginBottom:'10px'}} className="p-button-secondary p-button-raised" />
                                         <Button label="Success" style={{marginBottom:'10px'}} className="p-button-success p-button-raised" />
                                         <Button label="Info" style={{marginBottom:'10px'}} className="p-button-info p-button-raised" />
                                         <Button label="Warning" style={{marginBottom:'10px'}} className="p-button-warning p-button-raised" />
                                         <Button label="Danger" style={{marginBottom:'10px'}} className="p-button-danger p-button-raised" />
-                                    </div>
-                                    <div className="p-col-12 p-md-4" style={{textAlign:'center'}}>
+                                    </div> */}
+                                    {/* <div className="p-col-12 p-md-4" style={{textAlign:'center'}}>
                                         <Button label="Primary" style={{marginBottom:'10px'}}  className="p-button-rounded"/>
                                         <Button label="Secondary" style={{marginBottom:'10px'}} className="p-button-secondary p-button-rounded" />
                                         <Button label="Success" style={{marginBottom:'10px'}} className="p-button-success p-button-rounded" />
                                         <Button label="Info" style={{marginBottom:'10px'}} className="p-button-info p-button-rounded" />
                                         <Button label="Warning" style={{marginBottom:'10px'}} className="p-button-warning p-button-rounded" />
                                         <Button label="Danger" style={{marginBottom:'10px'}} className="p-button-danger p-button-rounded" />
-                                    </div>
-                                </div>
+                                    </div> */}
+                                {/* </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
