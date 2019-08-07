@@ -22,7 +22,7 @@ import {SelectButton} from 'primereact/selectbutton';
 import {Button} from 'primereact/button';
 import {SplitButton} from 'primereact/splitbutton';
 
-export class FormsDemo extends Component {
+export class CreateBooking extends Component {
 
     constructor() {
         super();
@@ -150,7 +150,7 @@ export class FormsDemo extends Component {
             <div className="p-grid p-fluid">
                 <div className="p-col-12 p-lg-6">
                     <div className="card card-w-title">
-                        <h1>InputText</h1>
+                        <h1>Contact Information</h1>
                         <div className="p-grid">
                             <div className="p-col-12 p-md-4">
                                 <InputText placeholder="Name"/>
@@ -162,13 +162,31 @@ export class FormsDemo extends Component {
                                 <InputText placeholder="Phone"/>
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Address" />
+                                <InputText placeholder="Address Line 1" />
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Disabled" disabled={true} />
+                                <InputText placeholder="Address Line 2" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="card card-w-title">
+                        <h1>Veunue Information</h1>
+                        <div className="p-grid">
+                            <div className="p-col-12 p-md-4">
+                                <InputText placeholder="Name"/>
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Error" className="p-error"/>
+                                <InputText placeholder="Email"/>
+                            </div>
+                            <div className="p-col-12 p-md-4">
+                                <InputText placeholder="Phone"/>
+                            </div>
+                            <div className="p-col-12 p-md-4">
+                                <InputText placeholder="Address Line 1" />
+                            </div>
+                            <div className="p-col-12 p-md-4">
+                                <InputText placeholder="Address Line 2" />
                             </div>
                         </div>
                     </div>
@@ -176,27 +194,6 @@ export class FormsDemo extends Component {
                     <div className="card card-w-title">
                         <h1>TextArea</h1>
                         <InputTextarea rows={3} cols={30} placeholder="Your Message" autoResize={true} />
-                    </div>
-
-                    <div className="card card-w-title">
-                        <h1>AutoComplete</h1>
-                        <div className="p-grid">
-                            <div className="p-col-12">
-                                <label htmlFor="acSimple">Simple</label>
-                            </div>
-                            <div className="p-col-12" style={{marginBottom:'10px'}}>
-                                <AutoComplete minLength={1} placeholder="Countries" id="acSimple" size={30} field="name" suggestions={this.state.filteredCountries}
-                                            completeMethod={this.filterCountry} value={this.state.country} onChange={event => this.setState({ country: event.value, filteredCountries: null})} />
-                            </div>
-                            <div className="p-col-12">
-                                <label htmlFor="acAdvanced">Advanced</label>
-                            </div>
-                            <div className="p-col-12">
-                                <AutoComplete minLength={1} placeholder="Hint: type 'v' or 'f'" id="acAdvanced" size={30} dropdown={true} multiple={true}
-                                            suggestions={this.state.filteredBrands} completeMethod={this.filterBrands} value={this.state.brand}
-                                            onChange={event => this.setState({ brand: event.value, filteredBrands: null})} itemTemplate={this.autoCompleteItemTemplate} />
-                            </div>
-                        </div>
                     </div>
 
                     <div className="card card-w-title">
@@ -230,44 +227,19 @@ export class FormsDemo extends Component {
                         </div>
                     </div>
 
-                    <div className="card card-w-title">
-                        <h1>Chips</h1>
-                        <Chips value={this.state.chipsValue} onChange={(e) => this.setState({chipsValue: e.value})}/>
-                    </div>
                 </div>
                 <div className="p-col-12 p-lg-6">
-                    <div className="card card-w-title">
-                        <h1>Checkboxes</h1>
-                        <div className="p-grid">
-                            <div className="p-col-12 p-md-4">
-                                <Checkbox value="Ultima" inputId="cb1" onChange={this.onCheckboxChange} checked={this.state.checkboxValue.indexOf('Ultima') > -1} />
-                                <label htmlFor="cb1" className="p-checkbox-label">Ultima</label>
-                            </div>
-                            <div className="p-col-12 p-md-4">
-                                <Checkbox value="Avalon" inputId="cb2" onChange={this.onCheckboxChange} checked={this.state.checkboxValue.indexOf('Avalon') > -1} />
-                                <label htmlFor="cb2" className="p-checkbox-label">Avalon</label>
-                            </div>
-                            <div className="p-col-12 p-md-4">
-                                <Checkbox value="Serenity" inputId="cb3" onChange={this.onCheckboxChange} checked={this.state.checkboxValue.indexOf('Serenity') > -1} />
-                                <label htmlFor="cb3" className="p-checkbox-label">Serenity</label>
-                            </div>
-                        </div>
-                    </div>
         
                     <div className="card card-w-title">
-                        <h1>RadioButtons</h1>
+                        <h1>Is the event inside or outside?</h1>
                         <div className="p-grid">
                             <div className="p-col-12 p-md-4">
-                                <RadioButton value="Ultima" inputId="rb1" onChange={event => this.setState({radioValue: event.value})} checked={this.state.radioValue === "Ultima"}/>
-                                <label htmlFor="rb1" className="p-radiobutton-label">Ultima</label>
+                                <RadioButton value="Inside" inputId="rb1" onChange={event => this.setState({radioValue: event.value})} checked={this.state.radioValue === "Inside"}/>
+                                <label htmlFor="rb1" className="p-radiobutton-label">Inside</label>
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <RadioButton value="Avalon" inputId="rb2" onChange={event => this.setState({radioValue: event.value})} checked={this.state.radioValue === "Avalon"}/>
-                                <label htmlFor="rb2" className="p-radiobutton-label">Avalon</label>
-                            </div>
-                            <div className="p-col-12 p-md-4">
-                                <RadioButton value="Serenity" inputId="rb3" onChange={event => this.setState({radioValue: event.value})} checked={this.state.radioValue === "Serenity"}/>
-                                <label htmlFor="rb3" className="p-radiobutton-label">Serenity</label>
+                                <RadioButton value="Outside" inputId="rb2" onChange={event => this.setState({radioValue: event.value})} checked={this.state.radioValue === "Outside"}/>
+                                <label htmlFor="rb2" className="p-radiobutton-label">Outside</label>
                             </div>
                         </div>
                     </div>
