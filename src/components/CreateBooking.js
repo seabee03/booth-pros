@@ -21,6 +21,8 @@ import {ToggleButton} from 'primereact/togglebutton';
 import {SelectButton} from 'primereact/selectbutton';
 import {Button} from 'primereact/button';
 import {SplitButton} from 'primereact/splitbutton';
+import {InputMask} from 'primereact/inputmask';
+
 
 export class CreateBooking extends Component {
 
@@ -153,13 +155,13 @@ export class CreateBooking extends Component {
                         <h1>Contact Information</h1>
                         <div className="p-grid">
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Name"/>
+                                <InputText required={true} placeholder="Name"/>
                             </div>
                             <div className="p-col-12 p-md-4">
                                 <InputText placeholder="E-mail Address"/>
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Phone Number"/>
+                                <InputMask mask="(999) 999-9999? x99999" placeholder="Phone Number" value={this.state.value} onChange={(e) => this.setState({value: e.value})} />
                             </div>
                             <div className="p-col-12 p-md-4">
                                 <InputText placeholder="E-mail Address"/>
@@ -174,10 +176,10 @@ export class CreateBooking extends Component {
                                 <InputText placeholder="City" />
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="State" />
+                                <InputMask mask="aa" placeholder="State" value={this.state.value} onChange={(e) => this.setState({value: e.value})} />
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Zip Code" />
+                                <InputMask mask="99999" placeholder="Zip Code" value={this.state.value} onChange={(e) => this.setState({value: e.value})} />
                             </div>
                         </div>
                     </div>
@@ -192,7 +194,7 @@ export class CreateBooking extends Component {
                                 <InputText placeholder="Venue Contact Name"/>
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Venue Phone Number"/>
+                            <InputMask mask="(999) 999-9999? x99999" placeholder="Venue Phone Number" value={this.state.value} onChange={(e) => this.setState({value: e.value})} />
                             </div>
                             <div className="p-col-12 p-md-4">
                                 <InputText placeholder="Venue Address Line 1" />
@@ -204,10 +206,10 @@ export class CreateBooking extends Component {
                                 <InputText placeholder="Venue City" />
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Venue State" />
+                                <InputMask mask="aa" placeholder="Venue State" value={this.state.value} onChange={(e) => this.setState({value: e.value})} />
                             </div>
                             <div className="p-col-12 p-md-4">
-                                <InputText placeholder="Venue Zip Code" />
+                                <InputMask mask="99999" placeholder="Venue Zip Code" value={this.state.value} onChange={(e) => this.setState({value: e.value})} />
                             </div>
                         </div>
                     </div>

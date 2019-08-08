@@ -24,6 +24,7 @@ export class AppTopbar extends Component {
                         <span className="layout-topbar-search-icon pi pi-search"/>
                     </span>
                 </div>
+                <img src="assets/layout/images/Booth-Pros.png" width="80" height="40"/>
             </div>
         );
     }

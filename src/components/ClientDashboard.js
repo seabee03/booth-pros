@@ -9,7 +9,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import timeGridPlugin from '@fullcalendar/timegrid';
 
-export class Dashboard extends Component {
+export class ClientDashboard extends Component {
 
     constructor() {
         super();
@@ -54,61 +54,15 @@ export class Dashboard extends Component {
             events: [
                 {
                     "id": 1,
-                    "title": "All Day Event",
-                    "start": "2019-08-01"
+                    "title": "Booking #123",
+                    "start": "2019-08-01T16:00:00",
+                    "end": "2019-08-01T18:00:00"
                 },
                 {
                     "id": 2,
-                    "title": "Long Event",
-                    "start": "2019-08-07",
-                    "end": "2019-08-10"
-                },
-                {
-                    "id": 3,
-                    "title": "Repeating Event",
-                    "start": "2019-08-09T16:00:00"
-                },
-                {
-                    "id": 4,
-                    "title": "Repeating Event",
-                    "start": "2019-08-16T16:00:00"
-                },
-                {
-                    "id": 5,
-                    "title": "Conference",
-                    "start": "2019-08-11",
-                    "end": "2019-08-13"
-                },
-                {
-                    "id": 6,
-                    "title": "Meeting",
-                    "start": "2019-08-12T10:30:00",
-                    "end": "2019-08-12T12:30:00"
-                },
-                {
-                    "id": 7,
-                    "title": "Lunch",
-                    "start": "2019-08-12T12:00:00"
-                },
-                {
-                    "id": 8,
-                    "title": "Meeting",
-                    "start": "2019-08-12T14:30:00"
-                },
-                {
-                    "id": 9,
-                    "title": "Happy Hour",
-                    "start": "2019-08-12T17:30:00"
-                },
-                {
-                    "id": 10,
-                    "title": "Dinner",
-                    "start": "2019-08-12T20:00:00"
-                },
-                {
-                    "id": 11,
-                    "title": "Birthday Party",
-                    "start": "2019-08-13T07:00:00"
+                    "title": "Booking #456",
+                    "start": "2019-08-24T17:00:00",
+                    "end": "2019-08-24T20:00:00"
                 }
             ]
         };

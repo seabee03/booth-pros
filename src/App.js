@@ -5,7 +5,7 @@ import {AppFooter} from './AppFooter';
 import {AppMenu} from './AppMenu';
 import {AppProfile} from './AppProfile';
 import {Route} from 'react-router-dom';
-import {Dashboard} from './components/Dashboard';
+import {ClientDashboard} from './components/ClientDashboard';
 import {CreateBooking} from './components/CreateBooking';
 import {EmptyPage} from './components/EmptyPage';
 import {Documentation} from "./components/Documentation";
@@ -26,7 +26,7 @@ class App extends Component {
         this.state = {
             layoutMode: 'static',
             layoutColorMode: 'light',
-            staticMenuInactive: true,
+            staticMenuInactive: false,
             overlayMenuActive: false,
             mobileMenuActive: false
         };
@@ -89,9 +89,9 @@ class App extends Component {
 
     createMenu() {
         this.menu = [
-            {label: 'Dashboard', icon: 'pi pi-fw pi-home', command: () => {window.location = '#/'}},
+            {label: 'Dashboard', icon: 'pi pi-fw pi-home', command: () => {window.location = '#/client-dashboard'}},
             {
-                label: 'Components', icon: 'pi pi-fw pi-globe', badge: '2',
+                label: 'Components', icon: 'pi pi-fw pi-globe',
                 items: [
                     {label: 'Create a booking', icon: 'pi pi-fw pi-file', to: '/create-booking'},
                     {label: 'Empty Page', icon: 'pi pi-fw pi-circle-off', to: '/empty'}
@@ -134,7 +134,7 @@ class App extends Component {
     }
 
     render() {
-        const logo = this.state.layoutColorMode === 'dark' ? 'assets/layout/images/logo-white.svg': 'assets/layout/images/logo.svg';
+        const logo = this.state.layoutColorMode === 'dark' ? 'assets/layout/images/Booth-Pros-White@0,1x.png': 'assets/layout/images/Booth-Pros@0,1x.png';
 
         const wrapperClass = classNames('layout-wrapper', {
             'layout-overlay': this.state.layoutMode === 'overlay',
@@ -162,7 +162,7 @@ class App extends Component {
                 </div>
 
                 <div className="layout-main">
-                    <Route path="/" exact component={Dashboard} />
+                    <Route path="/client-dashboard" exact component={ClientDashboard} />
                     <Route path="/create-booking" component={CreateBooking} />
                     <Route path="/empty" component={EmptyPage} />
                     <Route path="/documentation" component={Documentation} />
