@@ -8,7 +8,8 @@ import {Route} from 'react-router-dom';
 import {ClientDashboard} from './components/ClientDashboard';
 import {CreateBooking} from './components/CreateBooking';
 import {EmptyPage} from './components/EmptyPage';
-import {Documentation} from "./components/Documentation";
+import {SignUpService} from "./components/SignUpService";
+import {About} from "./components/About";
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
@@ -162,10 +163,11 @@ class App extends Component {
                 </div>
 
                 <div className="layout-main">
+                    <Route path="/about" component={About} />
                     <Route path="/client-dashboard" exact component={ClientDashboard} />
                     <Route path="/create-booking" component={CreateBooking} />
                     <Route path="/empty" component={EmptyPage} />
-                    <Route path="/documentation" component={Documentation} />
+                    <Route path="/sign-up" component={SignUpService} />
                 </div>
 
                 <AppFooter />
