@@ -5,11 +5,11 @@ import {AppFooter} from './AppFooter';
 import {AppMenu} from './AppMenu';
 import {AppProfile} from './AppProfile';
 import {Route} from 'react-router-dom';
-import {ClientDashboard} from './components/ClientDashboard';
-import {CreateBooking} from './components/CreateBooking';
-import {EmptyPage} from './components/EmptyPage';
+import {ClientDashboard} from './components/pages/ClientDashboard';
+import {CreateBooking} from './components/pages/CreateBooking';
+import {EmptyPage} from './components/pages/EmptyPage';
 import {SignUpService} from "./components/SignUpService";
-import {About} from "./components/About";
+import {About} from "./components/pages/About";
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
@@ -90,7 +90,7 @@ class App extends Component {
 
     createMenu() {
         this.menu = [
-            {label: 'Dashboard', icon: 'pi pi-fw pi-home', command: () => {window.location = '#/client-dashboard'}},
+            {label: 'Dashboard', icon: 'pi pi-fw pi-home', command: () => {window.location = '#/about}},
             {
                 label: 'Components', icon: 'pi pi-fw pi-globe',
                 items: [
@@ -163,7 +163,7 @@ class App extends Component {
                 </div>
 
                 <div className="layout-main">
-                    <Route path="/about" component={About} />
+                    <Route path="/about" exact component={About} />
                     <Route path="/client-dashboard" exact component={ClientDashboard} />
                     <Route path="/create-booking" component={CreateBooking} />
                     <Route path="/empty" component={EmptyPage} />
