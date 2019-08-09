@@ -2,7 +2,6 @@
   "name": "booth-pros",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/about",
   "engines": {
     "npm": "6.10.2",
     "node": "12.4.0"
