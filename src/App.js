@@ -8,7 +8,7 @@ import {Route} from 'react-router-dom';
 import {ClientDashboard} from './components/pages/ClientDashboard';
 import {CreateBooking} from './components/pages/CreateBooking';
 import {EmptyPage} from './components/pages/EmptyPage';
-import {SignUpService} from "./components/SignUpService";
+import {SignUpService} from "./components/pages/SignUpService";
 import {About} from "./components/pages/About";
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
