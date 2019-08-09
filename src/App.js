@@ -95,7 +95,7 @@ class App extends Component {
                 label: 'Components', icon: 'pi pi-fw pi-globe',
                 items: [
                     {label: 'Create a booking', icon: 'pi pi-fw pi-file', to: '/create-booking'},
-                    {label: 'Empty Page', icon: 'pi pi-fw pi-circle-off', to: '/empty'}
+                    // {label: 'Empty Page', icon: 'pi pi-fw pi-circle-off', to: '/empty'}
                 ]
             }
             // {

@@ -93,7 +93,7 @@ export class ClientDashboard extends Component {
     render() {        
         return (
             <div className="p-grid p-fluid dashboard">
-                <div className="p-col-12 p-lg-4">
+                {/* <div className="p-col-12 p-lg-4">
                     <div className="card summary">
                         <span className="title">Users</span>
                         <span className="detail">Number of visitors</span>
@@ -113,9 +113,9 @@ export class ClientDashboard extends Component {
                         <span className="detail">Income for today</span>
                         <span className="count revenue">$3,200</span>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="p-col-12 p-md-6 p-xl-3">
+                {/* <div className="p-col-12 p-md-6 p-xl-3">
                     <div className="highlight-box">
                         <div className="initials" style={{backgroundColor:'#ef6262',color:'#a83d3b'}}><span>TI</span></div>
                         <div className="highlight-details ">
@@ -144,39 +144,29 @@ export class ClientDashboard extends Component {
                             <span className="count">60</span>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="p-col-12 p-md-6 p-lg-4">
-                    <Panel header="Tasks" style={{height: '100%'}}>
+                    <Panel header="Notifications" style={{height: '100%'}}>
                         <ul className='task-list'>
                             <li>
                                 <Checkbox value="task1" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task1')>-1?true:false}></Checkbox>
-                                <span className="task-name">Sales Reports</span>
-                                <i className="pi pi-chart-bar" />
+                                <span className="task-name">Deposit for Booking #123 is due</span>
+                                <i className="pi pi-dollar" />
                             </li>
                             <li>
                                 <Checkbox value="task2" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task2')>-1?true:false}></Checkbox>
-                                <span className="task-name">Pay Invoices</span>
+                                <span className="task-name">Payment for Booking # 456 due in two days</span>
                                 <i className="pi pi-dollar" />
                             </li>
                             <li>
                                 <Checkbox value="task3" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task3')>-1?true:false}></Checkbox>
-                                <span className="task-name">Dinner with Tony</span>
+                                <span className="task-name">John from Booth Company has sent you a message</span>
                                 <i className="pi pi-user" />
                             </li>
                             <li>
-                                <Checkbox value="task4" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task4')>-1?true:false}></Checkbox>
-                                <span className="task-name">Client Meeting</span>
-                                <i className="pi pi-users" />
-                            </li>
-                            <li>
                                 <Checkbox value="task5" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task5')>-1?true:false}></Checkbox>
-                                <span className="task-name">New Theme</span>
-                                <i className="pi pi-briefcase" />
-                            </li>
-                            <li>
-                                <Checkbox value="task6" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task6')>-1?true:false}></Checkbox>
-                                <span className="task-name">Flight Ticket</span>
-                                <i className="pi pi-briefcase" />
+                                <span className="task-name">Film Strip Template for Booking#456 needs approval</span>
+                                <i className="pi pi-image" />
                             </li>
                         </ul>
                     </Panel>
@@ -259,20 +249,20 @@ export class ClientDashboard extends Component {
 
                         <ul className="activity-list">
                             <li>
-                                <div className="count">$900</div>
+                                <div className="count">$350</div>
                                 <div className="p-grid">
-                                    <div className="p-col-6">Income</div>
-                                    <div className="p-col-6">95%</div>
+                                    <div className="p-col-6">Balance for Booking #123</div>
+                                    <div className="p-col-6">5%</div>
                                 </div>
                             </li>
                             <li>
                                 <div className="count" style={{backgroundColor:'#f9c851'}}>$250</div>
                                 <div className="p-grid">
-                                    <div className="p-col-6">Tax</div>
-                                    <div className="p-col-6">24%</div>
+                                    <div className="p-col-6">Balance for Booking # 456</div>
+                                    <div className="p-col-6">95%</div>
                                 </div>
                             </li>
-                            <li>
+                            {/* <li>
                                 <div className="count" style={{backgroundColor:'#20d077'}}>$125</div>
                                 <div className="p-grid">
                                     <div className="p-col-6">Invoices</div>
@@ -299,7 +289,7 @@ export class ClientDashboard extends Component {
                                     <div className="p-col-6">Revenue</div>
                                     <div className="p-col-6">25%</div>
                                 </div>
-                            </li>
+                            </li> */}
                         </ul>
                     </Panel>
                 </div>
