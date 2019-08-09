@@ -90,7 +90,7 @@ class App extends Component {
 
     createMenu() {
         this.menu = [
-            {label: 'Dashboard', icon: 'pi pi-fw pi-home', command: () => {window.location = '#/about}},
+            {label: 'Dashboard', icon: 'pi pi-fw pi-home', command: () => {window.location = '#/about'}},
             {
                 label: 'Components', icon: 'pi pi-fw pi-globe',
                 items: [
