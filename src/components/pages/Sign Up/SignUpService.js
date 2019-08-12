@@ -46,26 +46,24 @@ export class SignUpService extends Component {
                         
                     </div>
                     <div className="card">
-                    <h1>Create Username & Password</h1>
-                    <div className="p-col-12 p-md-4">
-                        <span className="p-float-label">
-                            <InputText id="in" value={this.state.value} onChange={(e) => this.setState({value: e.target.value})} />
-                            <label htmlFor="in">Username</label>
-                        </span>
-                    </div>
-                    
-                    <div className="p-col-12 p-md-4">
-                        <span className="p-float-label">
-                            <Password id="in" value={this.state.value} onChange={(e) => this.setState({value: e.target.value})} />
-                            <label htmlFor="in">Password</label>
-                        </span>
-                    </div>
-                    
-                    <div className="p-col-12 p-md-4">
-                        <Button label="Submit" onClick={this.handleSignUpServiceSubmit} /> 
-                    </div>
-                      
+                        <h1>Create Username & Password</h1>
+                        <div className="p-col-12 p-md-4">
+                            <span className="p-float-label">
+                                <InputText id="in" value={this.state.value} onChange={(e) => this.setState({value: e.target.value})} />
+                                <label htmlFor="in">Username</label>
+                            </span>
+                        </div>
                         
+                        <div className="p-col-12 p-md-4">
+                            <span className="p-float-label">
+                                <Password id="in" value={this.state.value} onChange={(e) => this.setState({value: e.target.value})} />
+                                <label htmlFor="in">Password</label>
+                            </span>
+                        </div>
+                        
+                        <div className="p-col-12 p-md-4">
+                            <Button label="Submit" onClick={this.handleSignUpServiceSubmit} /> 
+                        </div>   
                     </div>
                 </div>
             </div>

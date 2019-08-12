@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CarService} from '../../service/CarService';
+import {CarService} from '../../../service/CarService';
 import {Panel} from 'primereact/panel';
 import {Checkbox} from 'primereact/checkbox';
 import {Button} from 'primereact/button';
@@ -9,7 +9,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import timeGridPlugin from '@fullcalendar/timegrid';
 
-export class ClientDashboard extends Component {
+export class AdminDashboard extends Component {
 
     constructor() {
         super();
@@ -54,12 +54,70 @@ export class ClientDashboard extends Component {
             events: [
                 {
                     "id": 1,
+                    "title": "All Day Event",
+                    "start": "2019-08-01"
+                },
+                {
+                    "id": 2,
+                    "title": "Long Event",
+                    "start": "2019-08-07",
+                    "end": "2019-08-10"
+                },
+                {
+                    "id": 3,
+                    "title": "Repeating Event",
+                    "start": "2019-08-09T16:00:00"
+                },
+                {
+                    "id": 4,
+                    "title": "Repeating Event",
+                    "start": "2019-08-16T16:00:00"
+                },
+                {
+                    "id": 5,
+                    "title": "Conference",
+                    "start": "2019-08-11",
+                    "end": "2019-08-13"
+                },
+                {
+                    "id": 6,
+                    "title": "Meeting",
+                    "start": "2019-08-12T10:30:00",
+                    "end": "2019-08-12T12:30:00"
+                },
+                {
+                    "id": 7,
+                    "title": "Lunch",
+                    "start": "2019-08-12T12:00:00"
+                },
+                {
+                    "id": 8,
+                    "title": "Meeting",
+                    "start": "2019-08-12T14:30:00"
+                },
+                {
+                    "id": 9,
+                    "title": "Happy Hour",
+                    "start": "2019-08-12T17:30:00"
+                },
+                {
+                    "id": 10,
+                    "title": "Dinner",
+                    "start": "2019-08-12T20:00:00"
+                },
+                {
+                    "id": 11,
+                    "title": "Birthday Party",
+                    "start": "2019-08-13T07:00:00"
+                },
+                {
+                    "id": 12,
                     "title": "Booking #123",
                     "start": "2019-08-01T16:00:00",
                     "end": "2019-08-01T18:00:00"
                 },
                 {
-                    "id": 2,
+                    "id": 13,
                     "title": "Booking #456",
                     "start": "2019-08-24T17:00:00",
                     "end": "2019-08-24T20:00:00"
@@ -93,7 +151,7 @@ export class ClientDashboard extends Component {
     render() {        
         return (
             <div className="p-grid p-fluid dashboard">
-                {/* <div className="p-col-12 p-lg-4">
+                <div className="p-col-12 p-lg-4">
                     <div className="card summary">
                         <span className="title">Users</span>
                         <span className="detail">Number of visitors</span>
@@ -113,9 +171,9 @@ export class ClientDashboard extends Component {
                         <span className="detail">Income for today</span>
                         <span className="count revenue">$3,200</span>
                     </div>
-                </div> */}
+                </div>
 
-                {/* <div className="p-col-12 p-md-6 p-xl-3">
+                <div className="p-col-12 p-md-6 p-xl-3">
                     <div className="highlight-box">
                         <div className="initials" style={{backgroundColor:'#ef6262',color:'#a83d3b'}}><span>TI</span></div>
                         <div className="highlight-details ">
@@ -144,29 +202,39 @@ export class ClientDashboard extends Component {
                             <span className="count">60</span>
                         </div>
                     </div>
-                </div> */}
+                </div>
                 <div className="p-col-12 p-md-6 p-lg-4">
-                    <Panel header="Notifications" style={{height: '100%'}}>
+                    <Panel header="Tasks" style={{height: '100%'}}>
                         <ul className='task-list'>
                             <li>
                                 <Checkbox value="task1" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task1')>-1?true:false}></Checkbox>
-                                <span className="task-name">Deposit for Booking #123 is due</span>
-                                <i className="pi pi-dollar" />
+                                <span className="task-name">Sales Reports</span>
+                                <i className="pi pi-chart-bar" />
                             </li>
                             <li>
                                 <Checkbox value="task2" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task2')>-1?true:false}></Checkbox>
-                                <span className="task-name">Payment for Booking # 456 due in two days</span>
+                                <span className="task-name">Pay Invoices</span>
                                 <i className="pi pi-dollar" />
                             </li>
                             <li>
                                 <Checkbox value="task3" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task3')>-1?true:false}></Checkbox>
-                                <span className="task-name">John from Booth Company has sent you a message</span>
+                                <span className="task-name">Dinner with Tony</span>
                                 <i className="pi pi-user" />
                             </li>
                             <li>
+                                <Checkbox value="task4" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task4')>-1?true:false}></Checkbox>
+                                <span className="task-name">Client Meeting</span>
+                                <i className="pi pi-users" />
+                            </li>
+                            <li>
                                 <Checkbox value="task5" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task5')>-1?true:false}></Checkbox>
-                                <span className="task-name">Film Strip Template for Booking#456 needs approval</span>
-                                <i className="pi pi-image" />
+                                <span className="task-name">New Theme</span>
+                                <i className="pi pi-briefcase" />
+                            </li>
+                            <li>
+                                <Checkbox value="task6" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task6')>-1?true:false}></Checkbox>
+                                <span className="task-name">Flight Ticket</span>
+                                <i className="pi pi-briefcase" />
                             </li>
                         </ul>
                     </Panel>
@@ -249,20 +317,20 @@ export class ClientDashboard extends Component {
 
                         <ul className="activity-list">
                             <li>
-                                <div className="count">$350</div>
+                                <div className="count">$900</div>
                                 <div className="p-grid">
-                                    <div className="p-col-6">Balance for Booking #123</div>
-                                    <div className="p-col-6">5%</div>
+                                    <div className="p-col-6">Income</div>
+                                    <div className="p-col-6">95%</div>
                                 </div>
                             </li>
                             <li>
                                 <div className="count" style={{backgroundColor:'#f9c851'}}>$250</div>
                                 <div className="p-grid">
-                                    <div className="p-col-6">Balance for Booking # 456</div>
-                                    <div className="p-col-6">95%</div>
+                                    <div className="p-col-6">Tax</div>
+                                    <div className="p-col-6">24%</div>
                                 </div>
                             </li>
-                            {/* <li>
+                            <li>
                                 <div className="count" style={{backgroundColor:'#20d077'}}>$125</div>
                                 <div className="p-grid">
                                     <div className="p-col-6">Invoices</div>
@@ -289,7 +357,7 @@ export class ClientDashboard extends Component {
                                     <div className="p-col-6">Revenue</div>
                                     <div className="p-col-6">25%</div>
                                 </div>
-                            </li> */}
+                            </li>
                         </ul>
                     </Panel>
                 </div>
