@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import classNames from 'classnames';
-import {AppTopbar} from './AppTopbar';
-import {AppFooter} from './AppFooter';
-import {AppMenu} from './AppMenu';
-import {AppProfile} from './AppProfile';
+import {AppTopbar} from './components/other/AppTopbar';
+import {AppFooter} from './components/other/AppFooter';
+import {AppMenu} from './components/other/AppMenu';
+import {AppProfile} from './components/other/AppProfile';
 import {Route} from 'react-router-dom';
 import {ClientDashboard} from './components/pages/ClientDashboard';
 import {CreateBooking} from './components/pages/CreateBooking';
