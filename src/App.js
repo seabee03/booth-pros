@@ -10,6 +10,7 @@ import {CreateBooking} from './components/pages/CreateBooking';
 import {EmptyPage} from './components/pages/EmptyPage';
 import {SignUpService} from "./components/pages/SignUpService";
 import {About} from "./components/pages/About";
+import {Password} from 'primereact/password';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
